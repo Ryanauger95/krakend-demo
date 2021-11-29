@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "host": ["http://localhost:8080"],
+  "endpoints": [
+    {
+      "endpoint": "/henry-test",
+      "backend": [{}],
+      "extra_config": {
+        "github.com/devopsfaith/krakend/proxy": {
+          "static": {
+            "strategy": "always",
+            "data": {
+              "test-data": {
+                "id": 42,
+                "coin": "BTC",
+                "price": "63421.12"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
